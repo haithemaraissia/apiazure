@@ -1,0 +1,606 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Azure API Creation and Management" />
+    <meta name="keywords" content="Haithem Araissia, API, Azure, Sitecore, MVP" />
+    <meta name="author" content="Haithem Araissia" />
+    <title>Azure API Creation and Management</title>
+    <link rel="shortcut icon" href="assets/images/gt_favicon.png" />
+    <!-- Bootstrap itself -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+        rel="stylesheet" type="text/css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="assets/css/magister.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <!-- Fonts -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+        rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+    <!-- Wizard -->
+    <link href="assets/css/bootstrap-wizard.css" rel="stylesheet" />
+    <link href="chosen/chosen.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet'
+        type='text/css' />
+</head>
+<body class="theme-invert">
+    <nav class="mainmenu">
+        <div class="container">
+            <div class="dropdown">
+                <button type="button" class="navbar-toggle" data-toggle="dropdown">
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
+                    </span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li><a href="#head" class="active">Intro</a></li>
+                    <li><a href="#about" id="creationLink">Creation</a></li>
+                    <li><a href="#themes" id="managementLink">Management</a></li>
+                    <li><a href="#contact" id="getintouchLink">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--BEGIN MODAL CONFIG PORTLET-->
+    <div id="modal-config" class="modal fade" style="z-index: 9999">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="modal-image" class="img-responsive center-block" src="" data-toggle="modal"
+                        data-target="#modal-config" width="100%" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END MODAL CONFIG PORTLET-->
+    <!-- Main (Home) section -->
+    <section class="section" id="head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
+                    <h1 class="title">
+                        API Creation and Management</h1>
+                    <h2 class="subtitle">
+                        From Start to Finish</h2>
+                    <h3 class="tagline">
+                        One of the best feeling as Human is the ability to give back and share with the
+                        community.<br />
+                        <br />
+                        Throughout these tutorials, I’m sharing the wisdom of creating API through Azure
+                        and the enhanced feature of managing the API.<br>
+                        <br />
+                        Join me to enrich your skills on how to accomplish these tasks.
+                    </h3>
+                    <p>
+                        <button class="btn btn-default btn-lg" onclick="$('#creationLink').click();">
+                            Start
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Second (About) section -->
+    <section class="section" id="about">
+        <div class="row">
+            <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
+                <h1 class="title">
+                    API Creation & Delivery</h1>
+                <h2 class="subtitle">
+                    The Entire Bulk</h2>
+                <h3 class="tagline">
+                    In the process, I will guide you on how create and delivery API.<br />
+                    <br />
+                    Azure Platform simplies the process chain.
+                </h3>
+                <p>
+                    <button id="open-wizard" class="btn btn-default btn-lg">
+                        Create API
+                    </button>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Third (Works) section -->
+    <section class="section" id="themes">
+        <div class="row">
+            <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
+                <h1 class="title">
+                    API Management & Control</h1>
+                <h2 class="subtitle">
+                    All the Tools Needed</h2>
+                <h3 class="tagline">
+                    In the process, I will guide you on how to manage API.<br />
+                    <br />
+                    Azure Platform simplies the process chain.
+                </h3>
+                <p>
+                    <button id="manage-wizard" class="btn btn-default btn-lg">
+                        Manage API
+                    </button>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Fourth (Contact) section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="text-center title">
+                Get in touch</h2>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <p class="lead" style="color: white">
+                        Have a question about these tutorials, or want to suggest a new feature?</p>
+                    <p style="color: white">
+                        Get in touch with me, or drop me a line</p>
+                    <ul class="list-inline list-social">
+                        <li><a href="https://twitter.com/haraissiadotcom" target="_blank" class="btn btn-link"><i class="fa fa-twitter fa-fw">
+                        </i>Twitter</a></li>
+                        <li><a href="https://github.com/" target="_blank" class="btn btn-link"><i class="fa fa-github fa-fw">
+                        </i>Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/haithem-araissia-a373a11b" target="_blank" class="btn btn-link">
+                            <i class="fa fa-linkedin fa-fw"></i>LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--WIZARD -->
+    <div class="wizard" id="satellite-wizard" data-title="Create API">
+        <!-- Step 1 Name & FQDN -->
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                Source Control</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 1 : Creating the Project in the Source Control</span></h5>
+                <div>
+                    Every project need a source Control. The choice of Source Control is subjective
+                    to Team / Individual Preferences. I personally use GitHub or BitBucket for most
+                    projects. For this tutorial, I will be using Visual Studio Online.<br />
+                    <br />
+                    <span class="label label-info">Source Controls:<br />
+                    </span><a href="https://www.visualstudio.com/vso/">https://www.visualstudio.com/vso/</a><br />
+                    <a href="https://github.com/">https://github.com/</a><br />
+                    <a href="https://bitbucket.org/">https://bitbucket.org/</a>
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/SourceControl.png" width="350"
+                        data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                Connect To Team Explorer</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 2 : Connecting to Visual Studio Online</span></h5>
+                <div>
+                    When you sign up with Visual Studio Online, you need to create a Project. In our
+                    instance, we will create an API project where the source control versioning will
+                    be controlled. The new project will come with master branch, but you can always
+                    add additional branches.
+                    <br />
+                    <br />
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/ConnectToProject.png" width="500"
+                        data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                Azure API Project</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 3 : Create a Visual Studio Azure API</span></h5>
+                <div>
+                    Using the Wizard in Visual Studio, create a web application. Then, select Azure
+                    Web API. Running Locally to make sure everything works as intended with the default
+                    setting. The process is quick and should be very fast.
+                    <br />
+                    <br />
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/NewAzureAPIApp.png" width="500"
+                        data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                Launch Local</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 4 : Running Default Settings Locally</span></h5>
+                <div>
+                    Run the project locally first. Since it is the web project API. It is very important
+                    to release that the endpoint are different. The routing configuration point to the
+                    Default Routing API:
+                    <pre><code>config.Routes.MapHttpRoute( name: "DefaultApi", routeTemplate: "api/{controller}/{id}",defaults:
+                        new { id = RouteParameter.Optional } ); </code></pre>
+                    The correct Url will be :<span class="label label-info">localhost:portnumber/API/Values
+                    </span>
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/ConnectToProject.png" width="300"
+                        data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                Enable Swagger</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 5 : Enable Swagger</span></h5>
+                <div>
+                    Microsoft has done a tremendous job facilizing our tasks, especially when it comes
+                    to documentation and testing. One of the best tool is <span class="label label-danger">
+                        SWAGGER UI</span>. It will be included in the project, you just have to enabled
+                    it. Source:<br />
+                    <span class="label label-success">SwaggerConfig.cs</span>
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/EnablingSwaggerCode.png"
+                        width="300" data-toggle="modal" data-target="#modal-config" /></a>
+                <div>
+                    To access Swagger, run the application and go to: <span class="label label-success">
+                        http://localhost:portnumber/swagger/ui/</span>
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/EnablingSwagger.png" width="300"
+                        data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                Build Instance</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 6 : Committing and Build First Instance</span></h5>
+                <div>
+                    In this step, we will let visual studio online do some work for us. Using your favorite
+                    Source Control ; either Visual Studio , Tree Source or other ; Commit your changes.
+                    Create a Build Release and Queue it in Visual Studio. Your Project should build
+                    correctly.
+                    <br />
+                    <br />
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/BuildProject.png" width="500"
+                        data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                Azure Portal</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 7 : Create Azure API App</span></h5>
+                <div>
+                    Create an API Project in Azure. In this process, we will link the azure portal source
+                    control to Visual Studio. Hence, the deployment will be automated. We can also control
+                    when to automate and how to switch slots, so the server will always be running.
+                    I really like this feature of Azure because it speed our process.
+                    <br />
+                    <br />
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/CreateAzureAPI.png" width="350"
+                        data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                API Definition</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 8 : Create API Definition</span></h5>
+                <div>
+                    API definition lets you configure the location of the Swagger 2.0 metadata describing
+                    your API. This makes it easy for others to discover and consume your API. Note:
+                    the URL can be a relative or absolute path, but must be publicly accessible. In
+                    our case , the url of the API definition will follow this pattern: <span class="label label-success">
+                        http://siteazure.net/Swagger/docs/v1</span>
+                    <br />
+                    <br />
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/SwaggerDefinition.png"
+                        width="350" data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                NYTimes API</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 9 : NYTimes Top Stories API</span></h5>
+                <div>
+                    In our scenario, we will target NYTimes Top Stories API, it is open to the public
+                    to an extent. The Top Stories API returns a list of articles and associated images
+                    currently on the specified section. Support JSON and JSONP. In addition, it uses
+                    Swagger too. Hence, the implementation is fast and compatible. Moreover, they offer
+                    console where you can run queries live.
+                    <br />
+                    <br />
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/APIConsoleTesting.png"
+                        width="350" data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                NYTimes Integration</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 10 : Develop and Integrate NY API</span></h5>
+                <div>
+                    In our scenario, we will target NYTimes Top Stories API, it is open to the public
+                    to an extent. The Top Stories API returns a list of articles and associated images
+                    currently on the specified section. Support JSON and JSONP. In addition, it uses
+                    Swagger too. Hence, the implementation is fast and compatible. Moreover, they offer
+                    console where you can run queries live.
+                    <br />
+                    In our case studio, we create a NYTimeArticle Model. Through <b>Async</b> Programming,
+                    we call the api, get the query and parse them to Json.
+                    <br />
+                    <br />
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/CodeBehind.png" width="350"
+                        data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                Publishing Changes</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 11 : Publishing Changes</span></h5>
+                <div>
+                    At this stage, we can publish the changes directly or for the best practice, we
+                    need to commit changes to source control. When Visual Studio Build it, it will send
+                    a notification to azure to get the latest code and voila: It is ready now.
+                    <br />
+                    <br />
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/PublishingAPI.png" width="350"
+                        data-toggle="modal" data-target="#modal-config" /></a><br />
+                <br />
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/ExecutionServer.png" width="250"
+                        data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+            <div class="wizard-error">
+                <div class="alert alert-error">
+                    <strong>There was a problem</strong> with your submission. Please correct the errors
+                    and re-submit.
+                </div>
+            </div>
+            <div class="wizard-failure">
+                <div class="alert alert-error">
+                    <strong>There was a problem</strong> submitting the form. Please try again in a
+                    minute.
+                </div>
+            </div>
+            <div class="wizard-success">
+                <div class="alert alert-success">
+                    <span class="create-server-name"></span>Congratulation, you should have created
+                    an API <strong>Successfully.</strong>
+                </div>
+                <a class="btn btn-default create-another-server">Run Tutorial Again.</a> <span style="padding: 0 10px">
+                    or</span> <a class="btn btn-info im-done" onclick="$('#managementLink').click();">Manage
+                        API Tutorial</a> <span style="padding: 0 10px">or</span> <a class="btn btn-success im-done">
+                            Done</a>
+            </div>
+        </div>
+    </div>
+    <!--MANAGEMENT WIZARD-->
+    <div class="wizard" id="management-wizard" data-title="API Management">
+        <!-- Step 1 Name & FQDN -->
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                Create API Management</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 1 : Creating Web API app Management</span></h5>
+                <div>
+                    One of the best milestone of Azure is API Management and I quote Microsoft “Use
+                    Azure API Management as a turnkey solution for publishing APIs to external and internal
+                    customers.”. It really is amazing. Basically, the entire management with subscription
+                    and api call infrastructure is given as simple wizard.
+                    <br />
+                    Scaling, Analytics and Identity Integration is at your fingertips. You will get
+                    a developer Portal along with a Publisher portal (WOW).
+                    <br />
+                    Using Azure, create an API Management application.
+                    <br />
+                    <br />
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/ImportAPI.png" width="350"
+                        data-toggle="modal" data-target="#modal-config" data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                API Management Platform</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 2 : API Management Platform</span></h5>
+                <div>
+                    When the app management is created, you can easily integrate existing API or creating
+                    new one from scratch. Since, we did go over the last tutorial on how to set up the
+                    API, we would be using that specific API.
+                    <br />
+                    Click on Import API and Input the swagger definition URL. Give it a Web API URL
+                    Suffix and enable Http and Https Scheme. Azure will automatically give you the URL
+                    of the API.
+                    <br />
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/APIManagment.png" width="350"
+                        data-toggle="modal" data-target="#modal-config" data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                API Console</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 3 : API Console</span></h5>
+                <div>
+                    The wonder of this tool is that it comes with a console, where you can test all
+                    aspects and get real time response. This is major feature in order for you to test
+                    all the aspects of the api.
+                    <br />
+                    <br />
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/ProductAPI.png" width="500"
+                        data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                Publisher Portal</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 4 : Publisher Portal</span></h5>
+                <div>
+                    The publisher portal is the administrative interface where you set up your API program.
+                    Use it to:<br />
+                    o Define or import API schema and Package APIs into products.<br />
+                    o Get insights from analytics for the different roles.<br />
+                    o Set up policies like quotas or transformations on the APIs.<br />
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/PublisherPortal.png" width="400"
+                        data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                Developer Portal</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 5 : Developer Portal</span></h5>
+                <div>
+                    The developer portal serves as the main web presence for developers, where they
+                    can:<br />
+                    o Read API documentation.<br />
+                    o Try out an API via the interactive console.<br />
+                    o Create an account and subscribe to get API keys.<br />
+                    o Access analytics on their own usage.
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/DeveloperPortal.png" width="400"
+                        data-toggle="modal" data-target="#modal-config" data-toggle="modal" data-target="#modal-config" /></a>
+                <br />
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                Build Instance</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 6 : Analytics</span></h5>
+                <div>
+                    The Analytic Feature helps you understand how much traffic your APIs are getting,
+                    what drives that traffic and at what level of performance this is being done. Learn
+                    where to look for ideas on improving the APIs that you offer to your developers.
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/Analytics.png" width="350"
+                        data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                Identity</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 7 : Identity</span></h5>
+                <div>
+                    Azure App Service offers built-in authentication and authorization services that
+                    implement OAuth 2.0 and OpenID Connect.<br />
+                    • It supports five identity providers: Azure Active Directory, Facebook, Google,
+                    Twitter, and Microsoft Account.<br />
+                    • It gives you several options for how much authentication work you want to do in
+                    your own code.<br />
+                    • It works for both end user and service account authentication.
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/Identities.png" width="350"
+                        data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+        </div>
+        <div class="wizard-card" data-cardname="name">
+            <h3>
+                Subscription</h3>
+            <div class="wizard-input-section">
+                <h5>
+                    <span class="label label-primary">Step 8 : Subscription</span></h5>
+                <div>
+                    The Subscription entity represents the association between a user and a product
+                    in API Management. Developers can also subscribe to the product and begin to use
+                    the product’s APIs.
+                    <br />
+                    <br />
+                    Basically, developers can create subscription based with authentication. Azure will
+                    take care of creating the entire slack from registering the user, managing the api
+                    and creating the keys. One Word : AMAZING.
+                </div>
+                <a href="#">
+                    <img class="wizard-group-list img-responsive" src="Server/Subscriptions.png" width="350"
+                        data-toggle="modal" data-target="#modal-config" /></a>
+            </div>
+            <div class="wizard-error">
+                <div class="alert alert-error">
+                    <strong>There was a problem</strong> with your submission. Please correct the errors
+                    and re-submit.
+                </div>
+            </div>
+            <div class="wizard-failure">
+                <div class="alert alert-error">
+                    <strong>There was a problem</strong> submitting the form. Please try again in a
+                    minute.
+                </div>
+            </div>
+            <div class="wizard-success">
+                <div class="alert alert-success">
+                    <span class="create-server-name"></span>Congratulation, you should have manage an
+                    API <strong>Successfully.</strong>
+                </div>
+                <a class="btn btn-default create-another-server">Run Tutorial Again.</a> <span style="padding: 0 10px">
+                    or</span> <a class="btn btn-info im-done" onclick="$('#getintouchLink').click();">Get
+                        In Touch</a> <span style="padding: 0 10px">or</span> <a class="btn btn-success im-done">
+                            Done</a>
+            </div>
+        </div>
+        <!-- Load js libs only when the page is loaded. -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"
+            type="text/javascript"></script>
+        <script src="assets/js/modernizr.custom.72241.js" type="text/javascript"></script>
+        <!-- Custom template scripts -->
+        <script src="assets/js/magister.js" type="text/javascript"></script>
+        <!--WIZARD-->
+        <script src="chosen/chosen.jquery.js" type="text/javascript"></script>
+        <script src="js/prettify.js" type="text/javascript"></script>
+        <script src="js/bootstrap-wizard.js" type="text/javascript"></script>
+        <!--CUSTOM-->
+        <script src="js/custom/satelitte-wizard.js" type="text/javascript"></script>
+        <script src="js/custom/management-wizard.js" type="text/javascript"></script>
+        <script src="js/custom/modal-wizard.js" type="text/javascript"></script>
+    </div>
+</body>
+</html>
